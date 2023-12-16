@@ -1,0 +1,39 @@
+.founder-heading{
+    color: #410C76;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 50px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin-top: 30px;
+}
+
+.founder-para{
+    color: #000;
+    text-align: justify;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-bottom: 50px;
+}
+
+.col-lg-4 p{
+    font-size: 17.5px;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.col-lg-4{
+    padding: 0 50px;
+}
+
+.founder-subheading{
+    color: #000;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}

@@ -1,0 +1,73 @@
+.course-heading{
+    color: #410C76;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 50px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+.course-subheading{
+    color: #000;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.course-para{
+    color: #000;
+    text-align: justify;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.bi{
+    font-size: 2.5rem;
+    padding-right: 1.5rem;
+    padding-top: 0.75rem;
+    color: #000;    
+}
+
+.course-list h3{
+    font-family: 'Inter', sans-serif;   
+    font-size: 1.5rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.course-list p{
+    font-family: 'Inter', sans-serif;   
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+    margin-top: 5px;
+}
+
+.col{
+    margin-bottom: 20px;
+}
+
+.card{
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.table{
+    margin-top: 75px;
+    font-family: 'Inter', sans-serif;
+}
+
+.course-table{
+    padding: 0 250px;
+}

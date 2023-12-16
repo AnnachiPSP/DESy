@@ -1,0 +1,75 @@
+.eligibility-heading{
+    color: #410C76;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 50px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+.eligibility-para{
+    color: #000;
+    text-align: justify;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.eligibility-form{
+    padding: 10px 150px;
+    height: 100%;
+}
+
+.eligibility-form form{
+    top: 15%;
+    width: 100%;
+    padding: 25px 50px 25px 50px;  
+    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    background-color: #F8F7F5;
+}
+
+.eligibility-btn{
+    text-align: center;
+    font-family: 'Inter', sans-serif;   
+    font-size: 1.5rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    padding: 10px 30px;
+    margin-top: 10px;
+}
+
+.eligibility-row{
+    margin-bottom: -10px !important;
+}
+
+table{
+    margin-top: 5rem;
+    font-family: 'Inter', sans-serif;
+}
+
+.eligibility-table{
+    padding: 0 75px;
+}
+
+.table-rows td {
+    padding: 10px; 
+    margin: 5px 0;
+}
+
+.table-rows:hover{
+    background-color: rgb(207, 217, 240);
+}
+
+.table-rows:active{
+    background-color: rgb(162, 179, 220);
+}
+
+.table-anchor {
+    display: contents;
+    padding-bottom: 5px !important;
+}

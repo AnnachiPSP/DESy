@@ -1,0 +1,85 @@
+import React from 'react'
+import Navbar from '../../components/Navbar'
+import './index.css'
+import { useNavigate } from 'react-router-dom'
+
+function Eligibility() {
+
+  const navigate = useNavigate();
+
+  return (
+    <>
+        <Navbar />
+        <div className='container'>
+          <h1 className='eligibility-heading'>Eligibility</h1>
+          <p className='eligibility-para'>Find the perfect courses that meet your eligibilty</p>
+          <div className='eligibility-form text-center'>
+            <form>
+
+              <div className="form-floating mb-3">
+                <input type="text" className="form-control" id="name" placeholder="Name" required />
+                <label htmlFor="name">Name</label>
+              </div>
+
+              <div className='eligibility-row row mb-3'>
+                <div className='col'>
+                  <div className="form-floating mb-3">
+                    <input type="date" className="form-control" id="dob" placeholder="DOB"  required />
+                    <label htmlFor="dob">DOB</label>
+                  </div>
+                </div>
+
+                <div className='col'>
+                  <div className="form-floating mb-3">
+                    <select className="form-select" id="gender" defaultValue="" required>  
+                      <option value="1">Male</option>
+                      <option value="2">Female</option>
+                      <option value="3">Others</option>
+                    </select>
+                    <label htmlFor="gender">Gender</label>
+                  </div>
+                </div>
+              </div>
+
+              <div className='eligibility-row row mb-3'>
+                <div className='col'>
+                  <div className="form-floating mb-3">
+                    <input type="text" className="form-control" id="location" placeholder="location" required />
+                    <label htmlFor="location">Location</label>
+                  </div>
+                </div>
+
+                <div className='col'>
+                  <div className="form-floating mb-3">
+                    <input type="number" className="form-control" id="jee" placeholder="jee rank" required />
+                    <label htmlFor="jee">JEE Mains Rank</label>
+                  </div>
+                </div>
+              </div>
+
+              <div className='eligibility-row row mb-3'>
+                <div className='col'>
+                  <div className="form-floating mb-3">
+                    <input type="number" className="form-control" id="class10" placeholder="class 10" required />
+                    <label htmlFor="class10">CBSE Class 10 Percentage</label>
+                  </div>
+                </div>
+
+                <div className='col'>
+                  <div className="form-floating mb-3">
+                    <input type="number" className="form-control" id="class12" placeholder="class 12" required />
+                    <label htmlFor="class12">CBSE Class 12 Percentage</label>
+                  </div>
+                </div>
+              </div>
+
+              <button type="submit" className="eligibility-btn btn btn-success" onClick={() => navigate('/eligibility-results')}> Fetch Results </button>
+
+            </form>
+          </div>
+        </div>
+    </>
+  )
+}
+
+export default Eligibility

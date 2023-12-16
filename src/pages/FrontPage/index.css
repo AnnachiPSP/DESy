@@ -1,0 +1,43 @@
+.frontpage-col{
+    position: relative;
+    height: calc(86vh);
+}
+
+.frontpage-col div{
+    position: absolute;
+    top: 17.5%;
+}
+
+.col-r{
+    left: 30%;
+}
+
+.desy-heading{
+    color: #410C76;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 50px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin-bottom: 70px;
+}
+
+.desy-subheading{
+    color: #000;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin-bottom: 35px;
+}
+
+.desy-para{
+    color: #000;
+    text-align: justify;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}

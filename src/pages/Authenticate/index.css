@@ -1,0 +1,51 @@
+.authenticate-body{
+    height: calc(88vh + 5px);
+    margin: 0;
+    display: grid;
+    place-items: center;
+}
+
+.desy-auth{
+    width: 27.5rem;
+    border-radius: 0.9375rem;
+    background: #F6F6FF;
+    padding: 1.5rem;
+    margin-top: -1rem;
+}
+
+.auth-heading{
+    color: #000;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 1.5rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin-bottom: 1.5rem;
+}
+
+.desy-input{
+    width: 90%;
+    border-radius: 10px;
+    height: 20%;
+}
+
+.desy-auth .form-floating{
+    margin-left: 30px;
+}
+
+.auth-btn{
+    text-align: center;
+    font-family: 'Inter', sans-serif;
+    font-size: 1.5rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    padding: 10px 30px;
+}
+
+.anchor-style{
+    text-decoration: none;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 700;   
+}
