@@ -1,0 +1,133 @@
+.contendor {
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  display: flex;
+  z-index: 1;
+  background-color: #f4f4f4;
+}
+
+.container_foto {
+  background-color: rgba(57, 62, 93, 0.7);
+  padding: 0;
+  overflow: hidden;
+  max-width: 350px;
+  margin: 5px;
+  position: relative;
+  font-family: 'Inter', sans-serif;
+  width: 100%;
+  box-sizing: border-box !important; 
+  box-shadow: 10px 10px 10px rgba(0.5, 0.5, 0.5, 0.1);
+  border-radius: 25px;
+}
+  
+  .container_foto article {
+    padding: 10%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    transition: all 0.5s ease;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  .container_foto h2 {
+    color: #fff;
+    font-weight: 800;
+    font-size: 40px;
+    border-bottom: #fff solid 1px;
+  }
+  
+  .container_foto h4 {
+    font-weight: 300;
+    color: #fff;
+    font-size: 16px;
+  }
+  
+  .container_foto img {
+    width: 100%;
+    height: 350px;
+    top: 0;
+    left: 0;
+    opacity: 0.4;
+    transition: all 4s ease;
+  }
+  
+  .ver_mas {
+    background-color: #feb66c;
+    position: absolute;
+    width: 100%;
+    height: 70px;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    opacity: 0;
+    transform: translateY(70px);
+    transition: all 0.2s ease-in-out;
+  }
+  
+  .ver_mas span {
+    color: #fff;
+    position: relative;
+    margin: 0 auto;
+    width: 100%;
+    top: 17.5px;
+  }
+  
+  .container_foto:hover {
+    cursor: pointer;
+  }
+  
+  .container_foto:hover img {
+    opacity: 0.1;
+    transform: scale(1.5);
+  }
+  
+  .container_foto:hover article {
+    transform: translateY(-70px);
+  }
+  
+  .container_foto:hover .ver_mas {
+    transform: translateY(0);
+    opacity: 1;
+  }
+
+  .consortium-row{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .consortium-span{
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .icon-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 10px;
+    font-size: 13.5px;
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .icon-button:hover {
+    background-color: #2980b9;
+  }
+  
+  .icon-button i {
+    margin-right: 10px;
+  }
+  
+  .icon-button span {
+    white-space: nowrap;
+    margin-top: -35px;
+  }
+  

@@ -1,6 +1,7 @@
 import React from 'react'
 import '../index.css'
-import Navbar from '../../../components/Navbar'
+import Navbar from '../../../components/GuestNavbar'
+import { useNavigate } from 'react-router-dom'
 
 function InstituteSignup() {
 
@@ -12,6 +13,8 @@ function InstituteSignup() {
     border: 'none',
     backgroundColor: "black"
   }
+
+  const navigate = useNavigate();
 
   return (
     <>
@@ -42,7 +45,7 @@ function InstituteSignup() {
                     <label htmlFor="floatingPassword">Confirm Password</label>
                 </div>
                 <div className='col-md-12'>
-                    <button type="submit" className="auth-btn btn btn-success">Sign Up</button>
+                    <button type="submit" className="auth-btn btn btn-success" onClick={() => {navigate('/abc/clg-dashboard')}}>Sign Up</button>
                 </div>
                 <br />
                 <hr style={horStyle}/>

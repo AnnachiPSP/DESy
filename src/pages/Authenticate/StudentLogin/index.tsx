@@ -1,6 +1,7 @@
 import React from 'react'
 import '../index.css'
-import Navbar from '../../../components/Navbar'
+import Navbar from '../../../components/GuestNavbar'
+import { useNavigate } from 'react-router-dom'
 
 function StudentLogin() {
 
@@ -12,6 +13,8 @@ function StudentLogin() {
     border: 'none',
     backgroundColor: "black"
   }
+
+  const navigate = useNavigate();
 
   return (
     <>
@@ -30,7 +33,7 @@ function StudentLogin() {
                 <label htmlFor="floatingPassword">Password</label>
             </div>
             <div className='col-md-12'>
-                <button type="submit" className="auth-btn btn btn-success">Log In</button>
+                <button type="submit" className="auth-btn btn btn-success" onClick={() => {navigate('/xyz/dashboard')}}>Log In</button>
             </div>
 
             <br />

@@ -1,0 +1,91 @@
+*{
+    text-decoration: none  !important;
+    box-sizing: border-box !important;
+}
+
+.student-nav ul {
+    list-style: none;
+    padding: 0;
+    margin-left: -7.5px !important;
+    z-index: 900;
+}
+
+.student-nav ul li:first-child{
+    padding: 0 0 0 10px;
+}
+
+.student-nav{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    height: 100%;
+    left: 0;
+    background: white;
+    width: 70px;
+    overflow: hidden;
+    transition: width 0.2s linear;
+    margin: 0;
+    outline: none;
+    border: none;  
+    /* box-shadow: 2px 0px 5px 0px rgba(84,84,84,1); */
+    z-index: 1000;
+}
+
+.student-logo{
+    text-align: center;
+    display: flex !important;
+}
+
+.student-logo .logo-img{
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+}
+
+.student-logo span{
+    color: #410C76;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 800;
+    padding-left: 15px;
+    margin-top: -10px !important;
+}
+
+.student-nav ul li a{
+    position: relative;
+    font-family: 'Inter', sans-serif; 
+    color:darkslategray;
+    font-size: 17.5px;
+    display: table;
+    width: 300px;
+    padding: 10px;
+    transition: all 0.5s ease;
+}
+
+.student-nav ul li a i{
+    position: relative;
+    width: 70px;
+    height: 40px;
+    top: 14px;
+    font-size: 20px;
+    text-align: center;
+}
+
+.nav-item{
+    position: relative;
+    top: 12px;
+}
+
+.student-nav ul li a:hover{
+    background: gainsboro;
+}
+
+.student-nav:hover{
+    width: 270px;
+    transition: all 0.5s ease;
+}
+
+.logout{
+    position: absolute !important;
+    bottom: 0;
+}

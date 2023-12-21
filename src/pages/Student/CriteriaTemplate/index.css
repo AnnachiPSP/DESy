@@ -1,0 +1,48 @@
+.table-container {
+    width: 75%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .criteria-table-row {
+    background-color: white;
+    transition: transform 0.3s, box-shadow 0.3s;
+    border-radius: 8px;
+    margin-bottom: 8px;
+  }
+
+  .criteria-table-row .table-cell:last-child{
+    padding-right: 40px;
+  }
+  
+  .criteria-table-row.bold {
+    font-weight: bold;
+    font-size: 1.2em;
+  }
+  
+  .criteria-table-row.criteria-hoverable:hover {
+    transform: scale(1.05) translateY(-5px);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  .table-cell {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    text-align: center;
+  }
+  
+  .icon {
+    width: 20px;
+    height: 20px;
+    padding-right: 10px;
+  }
+  
+  .tick {
+    color: green;
+  }
+  
+  .cross {
+    color: red;
+  }
+  

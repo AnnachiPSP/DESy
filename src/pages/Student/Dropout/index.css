@@ -1,0 +1,68 @@
+.dropout-body{
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    text-align: center;
+}
+
+.dropout-body h1{
+    color: #410C76;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 50px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    padding-top: 10px;
+}
+
+.dropout-formbody{
+    font-family: 'Quicksand', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 89%;
+}
+
+.dropout-container {
+    background-color: #eeee;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    width: 900px;
+    padding: 20px;
+    text-align: center;
+}
+
+.dropout-criteria-container{
+    height: 65%;
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+}
+
+.dropout-row{
+    padding: 0px 20px !important;
+}
+
+.dropout-element{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 0px;
+}
+
+.dropout-element-btn{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-bottom: 0px;
+    padding-right: 30px;
+}
+
+.dropout-btn{
+    margin-top: 25px;
+}
