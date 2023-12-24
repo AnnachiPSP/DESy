@@ -1,0 +1,31 @@
+.application-body{
+    background-color: #f4f4f4;
+    height: 100vh;
+    width: 100vw;
+}
+
+.application-h1{
+    color: #410C76;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 50px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    padding-top: 10px;
+}
+
+.application-form{
+    background-color: #eeee;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 750px;
+    margin-left: 275px;
+    margin-top: 50px;
+    padding: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.custom-spacing-col {
+    padding: 0rem 3rem;
+  }

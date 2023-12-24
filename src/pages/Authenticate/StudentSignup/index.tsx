@@ -45,7 +45,7 @@ function StudentSignup() {
                     <label htmlFor="floatingPassword">Confirm Password</label>
                 </div>
                 <div className='col-md-12'>
-                    <button type="submit" className="auth-btn btn btn-success" onClick={() => {navigate('/xyz/dashboard')}}>Sign Up</button>
+                    <button type="submit" className="auth-btn btn btn-success" onClick={() => {navigate('/xyz/apply')}}>Sign Up</button>
                 </div>
                 <br />
                 <hr style={horStyle}/>

@@ -31,6 +31,8 @@ import InstituteCriterias from './pages/Institute/InstituteCriterias';
 import InstituteStudents from './pages/Institute/InstituteStudents';
 import InstituteFaculties from './pages/Institute/InstituteFaculties';
 import InstituteCourses from './pages/Institute/InstituteCourses';
+import ApplyNow from './pages/Student/Application';
+import ResultApply from './pages/Student/Application/results-apply';
 
 
 function App() {
@@ -52,6 +54,8 @@ function App() {
           <Route path='/course-institutes' element={< CourseInstitutes />} />
           <Route path='/consortium-partners' element={< ConsortiumPartners />} />
           <Route path='/admission-criteria' element={< AdmissionCritria />} />
+          <Route path='/:student/apply' element={< ApplyNow />} />
+          <Route path='/:student/apply-results' element={< ResultApply />} />
           <Route path='/:student/profile' element={< Profile />} />
           <Route path='/:student/dashboard' element={< Dashboard />} />
           <Route path='/:student/course-list' element={< CourseList />} />

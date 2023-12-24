@@ -1,4 +1,4 @@
-import {useState} from 'react'
+import {useState, useEffect} from 'react'
 import './index.css'
 import yourImage from '../../assets/images/DESy.png';
 import ConfirmModal from '../ConfirmModal';
@@ -6,6 +6,12 @@ import ConfirmModal from '../ConfirmModal';
 function InstituteNavbar() {
 
     const [openModal, setOpenModal] = useState(false);
+    const [activeItem, setActiveItem] = useState('');
+
+    useEffect(() => {
+        const currentPath = window.location.pathname;
+        setActiveItem(currentPath);
+      }, []);
 
   return (
     <>
@@ -18,37 +24,37 @@ function InstituteNavbar() {
                     </a>
                 </li>
                 <li>
-                    <a href="/abc/clg-profile">
+                    <a href="/abc/clg-profile" className={activeItem === '/abc/clg-profile' ? 'active' : ''} onClick={() => setActiveItem('/xyz/clg-profile')}>
                         <i className="fa-solid fa-user"></i>
                         <span className='nav-item'>Profile</span>
                     </a>
                 </li>
                 <li>
-                    <a href="/abc/clg-analysis">
+                    <a href="/abc/clg-analysis" className={activeItem === '/abc/clg-analysis' ? 'active' : ''} onClick={() => setActiveItem('/abc/clg-analysis')}>
                         <i className="fa-solid fa-chart-area"></i>
                         <span className='nav-item'>Analysis</span>
                     </a>
                 </li>
                 <li>
-                    <a href="/abc/clg-criterias">
+                    <a href="/abc/clg-criterias" className={activeItem === '/abc/clg-criterias' ? 'active' : ''} onClick={() => setActiveItem('/abc/clg-criterias')}>
                         <i className="fa-solid fa-list-check"></i>
                         <span className='nav-item'>Criterias</span>
                     </a>
                 </li>
                 <li>
-                    <a href="/abc/clg-students">
+                    <a href="/abc/clg-students" className={activeItem === '/abc/clg-students' ? 'active' : ''} onClick={() => setActiveItem('/abc/clg-students')}>
                         <i className="fa-solid fa-user-group"></i>
                         <span className='nav-item'>Students</span>
                     </a>
                 </li>
                 <li>
-                    <a href="/abc/clg-faculties">
+                    <a href="/abc/clg-faculties" className={activeItem === '/abc/clg-faculties' ? 'active' : ''} onClick={() => setActiveItem('/abc/clg-faculties')}>
                         <i className="fa-solid fa-chalkboard-user"></i> 
                         <span className='nav-item'>Faculties</span>
                     </a>
                 </li>
                 <li>
-                    <a href="/abc/clg-courses">
+                    <a href="/abc/clg-courses" className={activeItem === '/abc/clg-courses' ? 'active' : ''} onClick={() => setActiveItem('/abc/clg-courses')}>
                         <i className="fa-solid fa-list"></i>
                         <span className='nav-item'>Courses</span>
                     </a>

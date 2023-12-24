@@ -7,6 +7,7 @@
     list-style: none;
     padding: 0;
     margin-left: -7.5px !important;
+    z-index: 900;
 }
 
 .institute-nav ul li:first-child{
@@ -26,7 +27,8 @@
     margin: 0;
     outline: none;
     border: none;
-    box-shadow: 2px 0px 5px 0px rgba(84,84,84,1);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
 }
 
 .institute-logo{
@@ -75,6 +77,10 @@
 }
 
 .institute-nav ul li a:hover{
+    background: gainsboro;
+}
+
+.institute-nav ul li a.active {
     background: gainsboro;
 }
 
