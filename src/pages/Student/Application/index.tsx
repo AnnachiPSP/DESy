@@ -1,29 +1,55 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./index.css";
+import axios from 'axios'
+
+// API endpoint
+const api = axios.create({
+  baseURL: `http://localhost:3000/pvt_api/`
+});
 
 function ApplyNow() {
 
   const navigate = useNavigate();
-    
-  const [formData, setFormData] = useState<FormData>({
-    dob: "",
-    gender: "",
-    location: "",
-    adhaarCardNumber: "",
-    jeeRank: 0,
-    class12Percentile: 0,
-    class10Percentile: 0,
+
+  const [formValues, setFormValues] = useState({
+    dob: '',
+    gender: '',
+    location: '',
+    adhaarNo: '',
+    adhaarCopy: null,
+    jeeRank: '',
+    jeeCopy: null,
+    mark12: '',
+    mark12Copy: null,
+    mark10: '',
+    mark10Copy: null,
   });
 
-  const handleChange = (
-    event: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>
-  ) => {
-    setFormData({ ...formData, [event.target.name]: event.target.value });
+  const handleInputChange = (field, value) => {
+    setFormValues({ ...formValues, [field]: value });
   };
 
-  const handleFileChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    setFormData({ ...formData, [event.target.name]: event.target.files[0] });
+  const handleFileChange = (field, file) => {
+    setFormValues({ ...formValues, [field]: file });
+  };
+
+  const handleSubmit = async e => {
+
+    e.preventDefault();
+
+    const formData = new FormData();
+    for (const [key, value] of Object.entries(formValues)) {
+      formData.append(key, value);
+    }
+
+    for (const [key, value] of formData.entries()) {
+      console.log(`${key}: ${value}`);
+    }
+
+    const result = await api.post('/student_apply/surya', formData);
+    console.log(result.data);
+
   };
 
   return (
@@ -31,7 +57,7 @@ function ApplyNow() {
       <div className="container">
         <h1 className="text-center mb-4 application-h1">Application Form</h1>
         <div className="application-form">
-          <form className="row g-3">
+          <div className="row g-3">
             <div className="col-md-4">
               <label htmlFor="dob" className="form-label">
                 Date of Birth:
@@ -41,8 +67,8 @@ function ApplyNow() {
                 id="dob"
                 name="dob"
                 className="form-control"
-                value={formData.dob}
-                onChange={handleChange}
+                value={formValues.dob}
+                onChange={e => handleInputChange('dob', e.target.value)}
               />
             </div>
             <div className="col-md-4">
@@ -53,8 +79,8 @@ function ApplyNow() {
                 id="gender"
                 name="gender"
                 className="form-select"
-                value={formData.gender}
-                onChange={handleChange}
+                value={formValues.gender}
+                onChange={e => handleInputChange('gender', e.target.value)}
               >
                 <option value="">Select Gender</option>
                 <option value="Male">Male</option>
@@ -71,11 +97,10 @@ function ApplyNow() {
                 id="location"
                 name="location"
                 className="form-control"
-                value={formData.location}
-                onChange={handleChange}
+                value={formValues.location}
+                onChange={e => handleInputChange('location',e.target.value)}
               />
             </div>
-
             <div className="col-md-6 custom-spacing-col">
               <label htmlFor="adhaarCardNumber" className="form-label">
                 Aadhaar Card Number:
@@ -85,8 +110,8 @@ function ApplyNow() {
                 id="adhaarCardNumber"
                 name="adhaarCardNumber"
                 className="form-control"
-                value={formData.adhaarCardNumber}
-                onChange={handleChange}
+                value={formValues.adhaarNo}
+                onChange={e => handleInputChange('adhaarNo',e.target.value)}
               />
             </div>
             <div className="col-md-6 custom-spacing-col">
@@ -98,7 +123,7 @@ function ApplyNow() {
                 id="adhaarCardCopy"
                 name="adhaarCardCopy"
                 className="form-control"
-                onChange={handleFileChange}
+                onChange={e => handleFileChange('adhaarCopy',e.target.files[0])}
               />
             </div>
 
@@ -111,8 +136,8 @@ function ApplyNow() {
                 id="jeeRank"
                 name="jeeRank"
                 className="form-control"
-                value={formData.jeeRank}
-                onChange={handleChange}
+                value={formValues.jeeRank}
+                onChange={e => handleInputChange('jeeRank',e.target.value)}
               />
             </div>
             <div className="col-md-6 custom-spacing-col">
@@ -124,7 +149,7 @@ function ApplyNow() {
                 id="jeeScoresheet"
                 name="jeeScoresheet"
                 className="form-control"
-                onChange={handleFileChange}
+                onChange={e => handleFileChange('jeeCopy',e.target.files[0])}
               />
             </div>
 
@@ -137,8 +162,8 @@ function ApplyNow() {
                 id="class12Percentile"
                 name="class12Percentile"
                 className="form-control"
-                value={formData.class12Percentile}
-                onChange={handleChange}
+                value={formValues.mark12}
+                onChange={e => handleInputChange('mark12',e.target.value)}
               />
             </div>
             <div className="col-md-6 custom-spacing-col">
@@ -150,7 +175,7 @@ function ApplyNow() {
                 id="class12Scoresheet"
                 name="class12Scoresheet"
                 className="form-control"
-                onChange={handleFileChange}
+                onChange={e => handleFileChange('mark12Copy',e.target.files[0])}
               />
             </div>
 
@@ -163,8 +188,8 @@ function ApplyNow() {
                 id="class10Percentile"
                 name="class10Percentile"
                 className="form-control"
-                value={formData.class10Percentile}
-                onChange={handleChange}
+                value={formValues.mark10}
+                onChange={e => handleInputChange('mark10',e.target.value)}
               />
             </div>
             <div className="col-md-6 custom-spacing-col">
@@ -176,16 +201,16 @@ function ApplyNow() {
                 id="class10Scoresheet"
                 name="class10Scoresheet"
                 className="form-control"
-                onChange={handleFileChange}
+                onChange={e => handleFileChange('mark10Copy',e.target.files[0])}
               />
             </div>
             <div className="col-12 text-center">
               <br />
-              <button type="submit" className="btn btn-primary" onClick={() => navigate('/xyz/apply-results')}>
+              <button className="btn btn-primary" onClick={handleSubmit}>
                 Submit Application
               </button>
             </div>
-          </form>
+          </div>
         </div>
       </div>
     </div>

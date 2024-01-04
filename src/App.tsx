@@ -54,10 +54,10 @@ function App() {
           <Route path='/course-institutes' element={< CourseInstitutes />} />
           <Route path='/consortium-partners' element={< ConsortiumPartners />} />
           <Route path='/admission-criteria' element={< AdmissionCritria />} />
-          <Route path='/:student/apply' element={< ApplyNow />} />
+          <Route path='/student/apply' element={< ApplyNow />} />
           <Route path='/:student/apply-results' element={< ResultApply />} />
           <Route path='/:student/profile' element={< Profile />} />
-          <Route path='/:student/dashboard' element={< Dashboard />} />
+          <Route path='/student/dashboard' element={< Dashboard />} />
           <Route path='/:student/course-list' element={< CourseList />} />
           <Route path='/:student/consortium-institutes' element={< ConsortiumInstitutes />} />
           <Route path='/:student/course-registration' element={< CourseRegistration />} />

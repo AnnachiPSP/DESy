@@ -1,5 +1,6 @@
 import React from 'react'
 import Navbar from '../../../components/GuestNavbar'
+import '../guest-style.css'
 import './index.css'
 
 function AdmissionCritria() {
@@ -18,8 +19,8 @@ function AdmissionCritria() {
     <>
         <Navbar />
         <div className='container'>
-            <h1 className="course-heading">Admission Criteria</h1>
-            <p className="course-para">Check if you fulfill the requirement to join {admissionCriteria.institute}</p>
+            <h1 className="guest-heading">Admission Criteria</h1>
+            <p className="guest-para">Check if you fulfill the requirement to join {admissionCriteria.institute}</p>
             <div className="course-table">
                 <table className="table table-borderless table-hover">
                     <tbody>

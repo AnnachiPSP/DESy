@@ -1,5 +1,6 @@
 import React from 'react'
 import Navbar from '../../../components/GuestNavbar'
+import '../guest-style.css'
 import './index.css'
 
 function ConsortiumPartners() {
@@ -14,8 +15,8 @@ function ConsortiumPartners() {
     <>
         <Navbar />
         <div className='container'>
-            <h1 className="course-heading">Consortium Partners</h1>
-            <p className="course-para">These institutes are in a consortium with National Institiute of Technology, Delhi</p>
+            <h1 className="guest-heading">Consortium Partners</h1>
+            <p className="guest-para">These institutes are in a consortium with National Institiute of Technology, Delhi</p>
 
             <div className="row row-cols-1 row-cols-lg-3 align-items-stretch g-4 py-5">
                 {consortiumPartners.map((data, index) => (

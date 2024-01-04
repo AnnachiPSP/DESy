@@ -1,5 +1,6 @@
 import React from 'react'
 import Navbar from '../../../components/GuestNavbar'
+import '../guest-style.css'
 import './index.css'
 import { useNavigate } from 'react-router-dom'
 
@@ -11,8 +12,8 @@ function Eligibility() {
     <>
         <Navbar />
         <div className='container'>
-          <h1 className='eligibility-heading'>Eligibility</h1>
-          <p className='eligibility-para'>Find the perfect courses that meet your eligibilty</p>
+          <h1 className='guest-heading'>Eligibility</h1>
+          <p className='guest-para'>Find the perfect courses that meet your eligibilty</p>
           <div className='eligibility-form text-center'>
             <form>
 
@@ -73,7 +74,7 @@ function Eligibility() {
                 </div>
               </div>
 
-              <button type="submit" className="eligibility-btn btn btn-success" onClick={() => navigate('/eligibility-results')}> Fetch Results </button>
+              <button type="submit" className="guest-btn btn btn-success" onClick={() => navigate('/eligibility-results')}> Fetch Results </button>
 
             </form>
           </div>

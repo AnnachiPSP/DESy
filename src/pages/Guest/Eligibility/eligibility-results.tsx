@@ -1,5 +1,6 @@
 import React from 'react'
 import Navbar from '../../../components/GuestNavbar'
+import '../guest-style.css'
 import './index.css'
 
 function EligibilityResults() {
@@ -17,8 +18,8 @@ function EligibilityResults() {
     <>
         <Navbar />
         <div className='container'>
-          <h1 className='eligibility-heading'>Results</h1>
-          <p className='eligibility-para'>Based on your scores, these instittutes offer you degrees</p>
+          <h1 className='guest-heading'>Results</h1>
+          <p className='guest-para'>Based on your scores, these instittutes offer you degrees</p>
           <div className='eligibility-table'>
             <table className="table table-borderless">
               <thead>
