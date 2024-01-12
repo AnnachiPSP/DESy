@@ -41,7 +41,6 @@ function StudentSignup() {
         let unique_user = await api.get('/check', {
           params: { name, phone, email },
         });
-        console.log(unique_user.data);
   
         if (unique_user.data['Unique']) {
           // Perform if new user

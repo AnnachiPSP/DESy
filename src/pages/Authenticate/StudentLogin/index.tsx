@@ -24,7 +24,7 @@ function StudentLogin() {
 
   const navigate = useNavigate();
 
-  const [email, setEmail] = useState('');
+  const [name, setName] = useState('');
   const [password, setPassword] = useState('');
 
   axios.defaults.withCredentials  = true;
@@ -34,7 +34,7 @@ function StudentLogin() {
     try {
       // Perform Login Action
       const student_details = {
-        student_mail: email,
+        student_username: name,
         student_password: password
       }
 
@@ -47,9 +47,12 @@ function StudentLogin() {
         const redirect = await axios.get('http://localhost:3000/pvt_api/isnew'); // Using private route for students
         if(redirect.data['Success'] == 1){
           //If the student is new applicant and not yet approved by any institute take him/her to application page
-          if(redirect.data['isNew']){
+          if(redirect.data['isNew'] == 0){
             navigate('/student/apply');
-          } else {
+          } else if(redirect.data['isNew'] == 1) {
+            navigate('/student/apply-results'); // If a student has already uploaded and waiting for approval or rejection from certain college
+          } 
+          else {
             navigate('/student/dashboard'); // If the student isn't new navigate him/her to the main portal
           }
         } else {
@@ -76,8 +79,8 @@ function StudentLogin() {
             <h2 className='auth-heading'>For a better World!</h2>
 
             <div className="form-floating mb-3">
-                <input type="email" className="form-control desy-input" id="floatingInput" placeholder="name@example.com" value={email} onChange={e => setEmail(e.target.value)} required/>
-                <label htmlFor="floatingInput">Email</label>
+                <input type="text" className="form-control desy-input" id="floatingInput" placeholder="name@example.com" value={name} onChange={e => setName(e.target.value)} required/>
+                <label htmlFor="floatingInput">User Name</label>
             </div>
             <div className="form-floating mb-3">
                 <input type="password" className="form-control desy-input" id="floatingPassword" placeholder="Password" value={password} onChange={e => setPassword(e.target.value)} required/>
