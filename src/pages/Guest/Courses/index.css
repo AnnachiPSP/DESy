@@ -8,10 +8,11 @@
 }
 
 .card{
-    background-attachment: fixed;
+    background-color: blanchedalmond;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+    opacity: 0.8;
 }
 
 .course-table{
