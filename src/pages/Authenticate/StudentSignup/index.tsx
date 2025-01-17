@@ -26,6 +26,7 @@ function StudentSignup() {
 
   const navigate = useNavigate();
 
+  // Form Data
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [phone, setPhone] = useState('');

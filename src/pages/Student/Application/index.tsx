@@ -18,11 +18,23 @@ function ApplyNow() {
   const navigate = useNavigate();
   
   // Verify if user is an authenticated student
+  // Redirect the user accordingly 
   useEffect(() => {
     axios.defaults.withCredentials = true;
-    api.get('/verifyUser', {withCredentials: true}).then(res => {
-      if(res.data['Success'] == 1) setUser(res.data['user']);
-      else navigate('/student-login');
+    api.get('/isnew', {withCredentials: true}).then(redirect => {
+      if(redirect.data['Success'] == 1){
+        //If the student is new applicant and not yet approved by any institute take him/her to application page
+        if(redirect.data['isNew'] == 0){
+          navigate('/student/apply');
+        } else if(redirect.data['isNew'] == 1) {
+          navigate('/student/apply-results'); // If a student has already uploaded and waiting for approval or rejection from certain college
+        } 
+        else {
+          navigate('/student/dashboard'); // If the student isn't new navigate him/her to the main portal
+        }
+      } else {
+        navigate('/student-login') // If not authorized go to login page
+      }
     })
   }, []);
 

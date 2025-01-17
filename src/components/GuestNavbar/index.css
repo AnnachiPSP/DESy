@@ -52,7 +52,7 @@
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);   
 }
 
-.login-link{
+.nav-content{
     color: #000;
     font-family: 'Inter', sans-serif;
     font-size: 19px;
@@ -64,7 +64,7 @@
     transition: color 0.3s ease;
 }
 
-.login-link:hover{
+.nav-content:hover{
     color: #410C76;
 }
 

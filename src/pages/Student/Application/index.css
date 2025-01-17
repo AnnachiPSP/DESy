@@ -90,3 +90,48 @@
     display: flex;
 }
 
+
+.sign-out-button{
+    border-radius: 20px !important;
+    background: #c02121 !important;
+    padding: 15px;
+    color: #FFF;
+    font-family: 'Inter', sans-serif;
+    font-size: 19px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    transition: all 0.2;
+    margin-bottom: 0.5rem;
+}
+
+.sign-out-button:hover{
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.sign-out-button:active{
+    transform: translateY(-1px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);   
+}
+
+/* HTML: <div class="loader"></div> */
+.loader {
+    width: 100%;
+    height: 600px;
+    display: flex; /* Use flexbox to center contents */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    font-weight: bold;
+    font-family: monospace;
+    font-size: 30px;
+    clip-path: inset(0 100% 0 0);
+    animation: l5 2s steps(11) infinite;
+    margin: 0; /* Remove any default margin */
+    box-sizing: border-box; /* Ensure padding doesn't affect size */
+  }
+  
+  .loader:before {
+    content:"Loading..."
+  }
+  @keyframes l5 {to{clip-path: inset(0 -1ch 0 0)}}

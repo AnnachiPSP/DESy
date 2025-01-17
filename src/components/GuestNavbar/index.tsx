@@ -27,7 +27,7 @@ function GuestNavbar() {
           </div>
           <div style={{ width: '33%' }} className="d-flex justify-content-end">
             <form>
-              <a className="login-link" href="/student-login">Login</a>
+              <a className="nav-content" href="/student-login">Login</a>
               <button className="btn btn-primary desy-button" type="submit" onClick={() => navigate('/student-signup')}>Signup</button>
             </form>
           </div>
